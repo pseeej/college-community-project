@@ -1,0 +1,65 @@
+/***** Community ******/
+
+.Community-head {
+  margin-bottom: 30px;
+}
+
+.col-style {
+  position: relative;
+  border: 5px solid #66ccff;
+  display: inline-block;
+  width: 27%;
+  height: 80px;
+  margin: 20px;
+  font-family: "NanumPen", sans-serif;
+  font-size: 60px;
+  text-align: center;
+  padding-top: 0px;
+  margin-bottom: 30px;
+  border-radius: 0px 20px 0px 20px;
+}
+
+.col-image {
+  width:98%;
+  height:250px;
+  border: 3px solid #5050ff;
+  margin-top: 10px;
+}
+
+.col-style.view {
+  width: 20%;
+  height: 20%;
+  margin: auto;
+  border: none;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  display:flex;
+}
+
+.col-style-column {
+  flex: 1;
+  margin: 0 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.col-style-content {
+  margin: 5px 0;
+  flex: 1;
+}
+
+.round {
+  border-radius: 10%;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.right-text {
+  text-align: right;
+}
+
+.left-text {
+  text-align: left;
+}
