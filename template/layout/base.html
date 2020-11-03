@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="../admin/css/font-set.css">
+    <link rel="stylesheet" href="../admin/css/footer.css">
+    <link rel="stylesheet" href="../admin/css/global.css">
+    <link rel="stylesheet" href="../admin/css/header.css">
+    <link rel="stylesheet" href="../admin/css/main.css">
+    <link rel="stylesheet" href="../admin/css/exp-content.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container-private">
+        <header class="header_box">
+            <div class="profile-title">
+                <h1 class="name-title h1"><a href="index.html" class="side-rm-text-dec">College Community</a></h1>
+            </div>
+            <div class="dropdown">
+                <li><a href="index.html" class="link-ul">Home</a></li>
+                <li><a href="index.html" class="link-ul">계정관리</a></li>
+                <li>
+                    <div>커뮤니티</div>
+                    <ul>
+                        <li><a href="../admin/free_write.html" class="link-ul">자유 게시판</li></a>
+                        <li><a href="../admin/advertisement.html" class="link-ul">홍보 게시판</a></li>
+                        <li><a href="../admin/question.html" class="link-ul">질문 게시판</a></li>
+                        <li><a href="../admin/tip.html" class="link-ul">각종 팁</a></li>
+                    </ul>
+                </li>
+                <li><a href="" class="link-ul">위치 찾기</a></li>
+            </div>
+        </header>
+
+        <!-- 메인 컨텐츠 파트 -->
+        <div class="display-set-flex">
+            <aside class="sidebar">
+                <h1 id="FIRST" class="sidebar-text">홍보 게시판</h1>
+            </aside>
+            <main class="sidebar-main sidebar-main-text">
+                <p class="indent lined-text main-divide">
+                    {% from "macro/link.html" import link %}
+                    {{ link( '/admin' , req_path ) }}
+                    {% block content %}{% endblock %}
+                </p>
+            </main>
+        </div>
+
+        <footer>
+            <div class="aside-list">
+                <div class="author-inform">
+                    <div class="author-inform-row">
+                        <span class="bold-text">문의사항</span>
+                        <ul>
+                            <li>pshgjh@gmail.com</li>
+                            <li>github.com/psh179/college-community-project</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p class="author-copyright bold-text">@ 2020 Soongsil University WebProj</p>
+        </footer>
+
+    </div>
+    
+</body>
+</html>

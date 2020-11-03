@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/exp-content.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container-private">
         <header class="header_box">
             <div class="profile-title">
                 <h1 class="name-title h1"><a href="index.html" class="side-rm-text-dec">College Community</a></h1>
@@ -34,7 +35,7 @@
         </header>
 
         <!-- 메인 컨텐츠 파트 -->
-        <div class="display-set-flex">
+        <!-- <div class="display-set-flex">
             <aside class="sidebar">
                 <h1 id="FIRST" class="sidebar-text">홍보 게시판</h1>
             </aside>
@@ -70,4 +71,33 @@
     </div>
     
 </body>
-</html>
+</html> -->
+
+{% set title = "홍보 게시판" %}
+{% extends "layout/base.html" %}
+ 
+{% block content -%}
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>제목</th>
+            <th>작성일</th>
+            <th>삭제</th>
+        </tr>
+        {% for posts in posts %}
+        <tr>
+            <td>
+                <a href="/admin/advertisement/detail/{{  posts.id }}">{{ product.name }}</a>
+            </td>
+            <td>
+                {{ product.dateFormat( product.createdAt ) }}
+            </td>
+            <td>
+                <a href="/admin/advertisement/delete/{{ product.id }}" class="btn btn-danger" onclick="return confirm('삭제하시겠습니까?')">삭제</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/admin/advertisement/write" class="btn btn-default">작성하기</a>
+
+{% endblock %}

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -31,10 +31,10 @@
                 </li>
                 <li><a href="" class="link-ul">위치 찾기</a></li>
             </div>
-        </header>
+        </header> -->
 
         <!-- 메인 컨텐츠 파트 -->
-        <div class="display-set-flex">
+        <!-- <div class="display-set-flex">
             <aside class="sidebar">
                 <h1 id="FIRST" class="sidebar-text">자유게시판</h1>
             </aside>
@@ -70,4 +70,33 @@
     </div>
     
 </body>
-</html>
+</html> -->
+
+{% set title = "자유 게시판" %}
+{% extends "layout/base.html" %}
+ 
+{% block content -%}
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>제목</th>
+            <th>작성일</th>
+            <th>삭제</th>
+        </tr>
+        {% for posts in posts %}
+        <tr>
+            <td>
+                <a href="/admin/free_write/detail/{{  post.id }}">{{ post.title }}</a>
+            </td>
+            <td>
+                {{ post.dateFormat( post.createdAt ) }}
+            </td>
+            <td>
+                <a href="/admin/free_write/delete/{{ post.id }}" class="btn btn-danger" onclick="return confirm('삭제하시겠습니까?')">삭제</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/admin/free_write/write" class="btn btn-default">작성하기</a>
+
+{% endblock %}

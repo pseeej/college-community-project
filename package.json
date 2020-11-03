@@ -1,0 +1,29 @@
+{
+  "name": "college-community-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx nodemon -e js,html server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psh179/college-community-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/psh179/college-community-project/issues"
+  },
+  "homepage": "https://github.com/psh179/college-community-project#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.1.0",
+    "nunjucks": "^3.2.2",
+    "sequelize": "^4.42.0"
+  }
+}
