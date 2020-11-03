@@ -1,12 +1,10 @@
 const express = require('express');
-const numjucks = require('nunjucks');
+const nunjucks = require('nunjucks');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
+//const path = require('path');
 
 const db = require('./models');
-
-
-
 
 
 class App {
@@ -29,7 +27,6 @@ class App {
 
         this.errorHandler();
 
-        //this.setPageRouting()
     }
 
     dbConnection(){
@@ -49,14 +46,19 @@ class App {
     }
 
     setViewEngine(){
-        numjucks.configure('template', {
-            autoescape: true,
+        //this.app.set("view engine", "html");
+        nunjucks.configure('template', {
+            autoescape: false,
             express: this.app
         });
+
     }
 
     setStatic(){
-        this.app.use('/uploads', express.static('uploads'));
+        //this.app.use('/uploads', express.static('uploads'));
+        //this.app.use('/css', express.static(__dirname+"/admin/css"));
+        this.app.use(express.static('template'));
+        //this.app.use(express.static(path.join(__dirname, '/template')));
     }
 
     setLocals(){
@@ -83,30 +85,5 @@ class App {
         });
     }
 
-    // setPageRouting(){
-    //     var index = require('./routes/index');
-    //     var admin = require('./routes/admin'); 
-    //     var page = require('./routes/page');
-    //     var create = require('./routes/create');
-
-    //     this.app.set('views', path.join(__dirname, 'views'));
-    //     this.app.set('view engine', 'html');
-
-    //     nunjucks.configure(__dirname + '/views', {
-    //         autoescape: true,
-    //         express: app,
-    //         watch: true
-    //     });
-
-    //     // Routing 미들웨어
-    //     this.app.use('/', index);
-    //     this.app.use('/admin', admin);
-    //     this.app.use('/about', page);
-    //     this.app.use('/create', create);
-
-    //     this.app.listen( port, function(){
-    //         console.log(`Example app listening on port ${port}! http://localhost:${port}`);
-    //     });}
-    // }
 }
 module.exports = new App().app;

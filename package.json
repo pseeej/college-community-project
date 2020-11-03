@@ -25,5 +25,8 @@
     "mysql2": "^2.1.0",
     "nunjucks": "^3.2.2",
     "sequelize": "^4.42.0"
+  },
+  "devDependencies": {
+    "gulp-nunjucks-render": "^2.2.3"
   }
 }

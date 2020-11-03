@@ -1,11 +1,15 @@
 const models = require('../../models');
 
+exports.getIndex = (_, res) => {
+    res.render('admin/free_write.html');
+}
+
 exports.get_free_write = ( _ , res) => {
     models.Posts.findAll({
 
     }).then( (posts) => {
         // DB에서 받은 products를 products변수명으로 내보냄
-        res.render( 'admin/free_write.html' ,{ posts });
+        res.render( 'admin/free_write.html' ,{ posts});
     });
 }
 
@@ -23,15 +27,15 @@ exports.post_free_write_write = ( req , res ) => {
 }
 
 exports.get_free_write_detail = ( req , res ) => {
-    models.Posts.findByPk(req.params.id).then( (post) => {
-        res.render('admin/free_write_detail.html', { post });  
+    models.Posts.findByPk(req.params.id).then( (posts) => {
+        res.render('admin/free_write_detail.html', { posts });  
     });
 };
 
 exports.get_free_write_edit = ( req , res ) => {
     //기존에 폼에 value안에 값을 셋팅하기 위해 만든다.
-    models.Posts.findByPk(req.params.id).then( (post) => {
-        res.render('admin/free_write_post.html', { post });
+    models.Posts.findByPk(req.params.id).then( (posts) => {
+        res.render('admin/free_write_post.html', { posts });
     });
 };
 

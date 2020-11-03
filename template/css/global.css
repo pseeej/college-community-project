@@ -1,0 +1,38 @@
+/***** GENERAL ******/
+h4 {
+    margin-top: 10px;
+}
+  
+h2 {
+  margin-bottom: 5px;
+}
+
+img {
+  width: 100%;
+}
+
+.link-ul {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.container-private {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 0 50px 0;
+}
+
+.main-image {
+  padding: 10px;
+}
+
+/***** color set *****/
+.color-head {
+    color:  #5050ff;
+}
+
+.color-content {
+    color: #4196e1;
+}
+  

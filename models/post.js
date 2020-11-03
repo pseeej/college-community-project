@@ -1,11 +1,13 @@
 const moment = require('moment');
 
 module.exports = function(sequelize, DataTypes){
-    const Posts = sequelize.define('Posts',
+    const Posts = sequelize.define('posts',
         {
             id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-            title : { type: DataTypes.STRING },
-            description : { type: DataTypes.TEXT }
+            title : { type: DataTypes.TEXT },
+            description : { type: DataTypes.TEXT },
+            createdAt : {type: DataTypes.DATE, allowNull: false },
+            updatedAt : {type: DataTypes.DATE, allowNull: false }
         }
     );
 
