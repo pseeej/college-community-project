@@ -1,15 +1,20 @@
 const models = require('../../models');
 
 exports.getIndex = (_, res) => {
-    res.render('admin/free_write.html');
+    models.posts.findAll({
+
+    }).then( (post) => {
+        // DB에서 받은 posts를 posts변수명으로 내보냄
+        res.render( 'admin/free_write.html' ,{ post});
+    });
 }
 
 exports.get_free_write = ( _ , res) => {
-    models.Posts.findAll({
+    models.posts.findAll({
 
-    }).then( (posts) => {
-        // DB에서 받은 products를 products변수명으로 내보냄
-        res.render( 'admin/free_write.html' ,{ posts});
+    }).then( (post) => {
+        // DB에서 받은 posts를 posts변수명으로 내보냄
+        res.render( 'admin/free_write.html' ,{ post});
     });
 }
 
@@ -18,30 +23,35 @@ exports.get_free_write_write = ( _ , res) => {
 }
 
 exports.post_free_write_write = ( req , res ) => {
-    models.Posts.create({
+    
+    models.posts.create({
         title : req.body.title,
         description : req.body.description
     }).then( () => {
-        res.redirect('/admin/free_write');
-    });
+        console.log(req.body);
+        //res.redirect('/admin/free_write');
+        res.send(req.body);
+    })
+    //models.posts.create()
+    //res.send(req.body);
 }
 
 exports.get_free_write_detail = ( req , res ) => {
-    models.Posts.findByPk(req.params.id).then( (posts) => {
-        res.render('admin/free_write_detail.html', { posts });  
+    models.posts.findByPk(req.params.id).then( (post) => {
+        res.render('admin/free_write_detail.html', { post });  
     });
 };
 
 exports.get_free_write_edit = ( req , res ) => {
     //기존에 폼에 value안에 값을 셋팅하기 위해 만든다.
-    models.Posts.findByPk(req.params.id).then( (posts) => {
-        res.render('admin/free_write_post.html', { posts });
+    models.posts.findByPk(req.params.id).then( (post) => {
+        res.render('admin/free_write_post.html', { post });
     });
 };
 
 exports.post_free_write_edit = ( req , res ) => {
 
-    models.Posts.update(
+    models.posts.update(
         {
             title : req.body.title,
             description : req.body.description
@@ -56,7 +66,7 @@ exports.post_free_write_edit = ( req , res ) => {
 }
 
 exports.get_free_write_delete = ( req , res ) => {
-    models.Posts.destroy({
+    models.posts.destroy({
         where: {
             id: req.params.id
         }

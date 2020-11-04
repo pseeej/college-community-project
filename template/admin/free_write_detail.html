@@ -1,5 +1,5 @@
 {% set title = "자유게시판 상세보기" %}
-{% set title = "자유게시판 상세보기" %}
+{% set subtitle = "게시글 상세보기" %}
 {% extends "layout/base.html" %}
  
 {% block content -%}
@@ -18,7 +18,7 @@
     </div>
 
     <a href="/admin/free_write" class="btn btn-default">목록으로</a>
-    <a href="/admin/free_write/edit/{{ product.id }}" class="btn btn-primary">수정</a>
+    <a href="/admin/free_write/edit/{{ post.id }}" class="btn btn-primary">수정</a>
 
 
 

@@ -5,9 +5,7 @@ module.exports = function(sequelize, DataTypes){
         {
             id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
             title : { type: DataTypes.TEXT },
-            description : { type: DataTypes.TEXT },
-            createdAt : {type: DataTypes.DATE, allowNull: false },
-            updatedAt : {type: DataTypes.DATE, allowNull: false }
+            description : { type: DataTypes.TEXT }
         }
     );
 

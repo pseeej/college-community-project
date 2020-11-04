@@ -1,15 +1,14 @@
 const { Router } = require('express');
 const router = Router();
-//const index_ctrl = require('./index.ctrl');
+const models = require('../models');
+const index_ctrl = require('./index.ctrl');
 
-//router.get('/', index_ctrl.get_index);
-router.get('/', (req, res) => {
-    res.render('admin/index.html');
-})
+router.get('/', index_ctrl.get_index);
+// router.get('/', (req, res) => {
+//     res.render('admin/index.html');
+// })
 
-router.get('/admin/free_write', (req, res) => {
-    res.render('admin/free_write.html');
-})
+router.get('/admin/free_write', index_ctrl.get_index_free);
 
 router.use('/admin', require('./admin'));
 
