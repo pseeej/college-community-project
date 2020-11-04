@@ -41,8 +41,9 @@ class App {
 
     setMiddleWare(){
         this.app.use(logger('dev'));
+        this.app.use(bodyParser.urlencoded({ extended: true }));
         this.app.use(bodyParser.json());
-        this.app.subscribe(bodyParser.urlencoded({ extended : false}));
+        //this.app.subscribe(bodyParser.urlencoded({ extended : true}));
     }
 
     setViewEngine(){

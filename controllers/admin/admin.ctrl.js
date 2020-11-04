@@ -28,9 +28,9 @@ exports.post_free_write_write = ( req , res ) => {
         title : req.body.title,
         description : req.body.description
     }).then( () => {
-        console.log(req.body);
-        //res.redirect('/admin/free_write');
-        res.send(req.body);
+        //console.log(req.body);
+        res.redirect('/admin/free_write');
+        //res.send(req.body);
     })
     //models.posts.create()
     //res.send(req.body);
