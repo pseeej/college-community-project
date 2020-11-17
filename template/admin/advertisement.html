@@ -74,6 +74,7 @@
 </html> -->
 
 {% set title = "홍보 게시판" %}
+{% set subtitle = "홍보 게시판" %}
 {% extends "layout/base.html" %}
  
 {% block content -%}
@@ -83,21 +84,21 @@
             <th>작성일</th>
             <th>삭제</th>
         </tr>
-        {% for posts in posts %}
+        {% for post in post %}
         <tr>
             <td>
-                <a href="/admin/advertisement/detail/{{  posts.id }}">{{ product.name }}</a>
+                <a href="/admin/adv/detail/{{  post.id }}">{{ post.title }}</a>
             </td>
             <td>
-                {{ product.dateFormat( product.createdAt ) }}
+                {{ post.dateFormat( post.createdAt ) }}
             </td>
             <td>
-                <a href="/admin/advertisement/delete/{{ product.id }}" class="btn btn-danger" onclick="return confirm('삭제하시겠습니까?')">삭제</a>
+                <a href="/admin/adv/delete/{{ post.id }}" class="btn btn-danger" onclick="return confirm('삭제하시겠습니까?')">삭제</a>
             </td>
         </tr>
         {% endfor %}
     </table>
 
-    <a href="/admin/advertisement/write" class="btn btn-default">작성하기</a>
+    <a href="/admin/adv/write" class="btn btn-default">작성하기</a>
 
 {% endblock %}

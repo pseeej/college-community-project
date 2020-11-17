@@ -12,6 +12,10 @@ router.get('/admin/free_write', index_ctrl.get_index_free);
 
 router.get('/free_write.html', index_ctrl.get_index_free);
 
+router.get('/advertisement.html', index_ctrl.get_index_adv);
+
+router.get('/admin/adv', index_ctrl.get_index_adv);
+
 router.use('/admin', require('./admin'));
 
 
