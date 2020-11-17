@@ -4,7 +4,7 @@ exports.getIndex = (_, res) => {
     models.posts.findAll({
 
     }).then( (post) => {
-        // DB에서 받은 posts를 posts변수명으로 내보냄
+        // DB에서 받은 posts를 post변수명으로 내보냄
         res.render( 'admin/free_write.html' ,{ post});
     });
 }
@@ -13,7 +13,7 @@ exports.get_free_write = ( _ , res) => {
     models.posts.findAll({
 
     }).then( (post) => {
-        // DB에서 받은 posts를 posts변수명으로 내보냄
+        // DB에서 받은 posts를 post변수명으로 내보냄
         res.render( 'admin/free_write.html' ,{ post});
     });
 }
@@ -74,3 +74,11 @@ exports.get_free_write_delete = ( req , res ) => {
         res.redirect('/admin/free_write');
     });
 }; 
+
+exports.get_free_write_index = (req, res) => {
+    res.redirect('/admin');
+}
+
+exports.get_free_write_slash = (req, res) => {
+    res.redirect('/admin/free_write');
+}

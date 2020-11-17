@@ -10,6 +10,8 @@ router.get('/', index_ctrl.get_index);
 
 router.get('/admin/free_write', index_ctrl.get_index_free);
 
+router.get('/free_write.html', index_ctrl.get_index_free);
+
 router.use('/admin', require('./admin'));
 
 

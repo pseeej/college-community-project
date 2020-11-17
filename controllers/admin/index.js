@@ -16,5 +16,9 @@ router.post('/free_write/edit/:id', ctrl.post_free_write_edit );
 
 router.get('/free_write/delete/:id', ctrl.get_free_write_delete );
 
+router.get('/free_write/index.html', ctrl.get_free_write_index );
+
+router.get('/free_write/admin/free_write', ctrl.get_free_write_slash);
+
 
 module.exports = router;

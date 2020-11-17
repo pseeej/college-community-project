@@ -1,7 +1,7 @@
 const models = require('../models');
 
 exports.get_index = ( _ , res) => {
-    res.render('admin/index.html');
+    res.render('index.html');
 }
 
 exports.get_index_free = ((req, res) => {
