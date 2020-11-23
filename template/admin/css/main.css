@@ -5,18 +5,19 @@
 }
 
 .col-style {
+  font-family: 'Gugi', sans-serif;
   position: relative;
-  border: 5px solid #5050ff;
+  border: 7px inset #50f3ff;
   display: inline-block;
-  width: 27%;
-  height: 80px;
+  width: 20%;
+  height: 60px;
   margin: 20px;
-  font-family: "NanumPen", sans-serif;
-  font-size: 60px;
+  font-size: 25px;
   text-align: center;
-  padding-top: 0px;
-  margin-bottom: 30px;
-  border-radius: 0px 20px 0px 20px;
+  margin-bottom: 150px;
+  margin-right: 150px;
+  margin-left: 50px;
+  border-radius: 5px 40px 5px 40px;
 }
 
 .col-image {
@@ -44,8 +45,27 @@
 }
 
 .col-style-content {
+  border: outset rgb(111, 228, 243);
   margin: 5px 0;
   flex: 1;
+  border-radius: 5px 20px 5px 20px;
+}
+
+.col-style-test {
+  font-family: 'Gugi', sans-serif;
+  position: relative;
+  border: 7px outset #f03d55;
+  display: inline-block;
+  width: 30%;
+  height: 60px;
+  margin: 20px;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 120px;
+  margin-left: 50px;
+  margin-right: 70px;
+  border-radius: 0px 10px 0px 10px;
 }
 
 .round {
