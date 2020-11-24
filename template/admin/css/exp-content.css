@@ -22,6 +22,7 @@
 .sidebar-text {
     margin-left: 20px;
     margin-right: 10px;
+    font-family: "Gugi";
 }
 
 .main-divide {
@@ -97,4 +98,25 @@
     width: 640px;
     height: 480px;
     margin: auto;
+}
+
+.btn-default{ /*목록으로*/
+    float : right;
+    margin-left : 3px;
+}
+
+.btn-primary{ /*수정*/
+    float : right;
+    margin-right : 3px;
+}
+
+.panel-heading{  /*글 제목 설정*/
+    font-size: large;
+    font-weight: bolder;
+}
+
+.content-date{  /*작성 일자 위치 변경*/
+    text-align: right;
+    font-size: small;
+    font-weight: normal;
 }
