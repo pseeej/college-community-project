@@ -44,7 +44,6 @@
     flex: 1;
     margin-left: 10px;
     overflow: auto;
-    background-color: white;
 }
 
 .sidebar-main-text {
@@ -59,7 +58,12 @@
 
 .main-rm-text-dec {
     text-decoration: none;
-    color: aquamarine; /* change color */
+    color: black; /* change color */
+}
+
+.main-rm-text-corona {
+    text-decoration: none;
+    color: red; /* change color */
 }
 
 .indent {
@@ -104,8 +108,6 @@
 .btn-default{ /*목록으로*/
     float : right;
     margin-left : 3px;
-    margin-bottom: 3px;
-    margin-right: 10px;
 }
 
 .btn-primary{ /*수정*/
@@ -119,8 +121,7 @@
 }
 
 .content-date{  /*작성 일자 위치 변경*/
-    display: inline;
-    float : right;
+    text-align: right;
     font-size: small;
     font-weight: normal;
 }

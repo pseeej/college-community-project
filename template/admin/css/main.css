@@ -1,19 +1,22 @@
 /***** Community ******/
 body { /* set image on background */
-  background-image: url(../../../img/background.jpeg);
+  background-image: url(../../img/background.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: repeat;
-  background-attachment: scroll;
+  background-attachment: fixed;
 }
 
 /* change Community-head css */
 .Community-head { 
+  font-family: "Gugi", sans-serif;
   margin-top: 0px;
   padding: 10px;
   margin-bottom: 30px;
-  background-color: white;
-  opacity: 0.5;
+  color: black;
+  background-color: mediumaquamarine;
+  border-radius: 0px 0px 15px 15px;
+  opacity: 0.90;
 }
 
 .col-style { /* move value to col-style-content */
@@ -50,27 +53,73 @@ body { /* set image on background */
 
 .col-style-content {
   font-family: "Gugi", sans-serif;
+  background-color: mediumaquamarine;
   font-size: 40px;
   text-align: center;
-  border: 5px solid #5050ff;
+  border: 7px outset #5050ff;
   width:auto;
-  border-radius: 0px 20px 0px 20px;
+  border-radius: 20px 5px 20px 5px;
   margin-right: auto;
   flex: 1;
 }
 
+.col-style-corona {
+  font-family: "Gugi", sans-serif;
+  background-color: orange;
+  font-size: 40px;
+  text-align: center;
+  border: 5px double yellow;
+  width:auto;
+  border-radius: 5px 5px 5px 5px;
+  flex: 1;
+}
+
+.col-style-alram {
+  font-family: "Gugi", sans-serif;
+  background-color: bisque;
+  font-size: 40px;
+  text-align: center;
+  border: 5px solid green;
+  width:auto;
+  border-radius: 5px 5px 5px 5px;
+  flex: 1;
+}
+
 .col-content { /* create new css for abstract content */
-  float: left;
+  /* float: left; */
+  position: relative;
+  display: inline-block;
   box-sizing: border-box;
+  border-radius: 10px 10px 10px 10px;
   margin-left: 10px;
   margin-bottom: 50px;
   align-content: center;
-  border: double black;
+  border: inset black;
   background-color: white;
-  opacity: 0.5;
-  width: 45%;
+  opacity: 0.9;
+  width: 44%;
   height: 160px;
+
 }
+
+.col-content-bottom { /* create new css for abstract content */
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 30px 30px 30px 30px;
+  padding: 10px;
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-right: 40px;
+  margin-bottom: 10px;
+  align-content: center;
+  border: inset white;
+  background-color: white;
+  width: 40%;
+  height: 120px;
+
+}
+
 
 .round {
   border-radius: 10%;
