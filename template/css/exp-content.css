@@ -44,6 +44,7 @@
     flex: 1;
     margin-left: 10px;
     overflow: auto;
+    background-color: white;
 }
 
 .sidebar-main-text {
@@ -58,7 +59,7 @@
 
 .main-rm-text-dec {
     text-decoration: none;
-    color: black;
+    color: aquamarine; /* change color */
 }
 
 .indent {
@@ -100,10 +101,24 @@
     margin: auto;
 }
 
-.btn-default{   /*글 목록 창에서의 작성하기*/
-    float :right;
+.btn-default{ /*목록으로*/
+    float : right;
+    margin-left : 3px;
 }
 
-.btn-primary{   /*글 작성 창에서의 작성하기*/
+.btn-primary{ /*수정*/
     float : right;
+    margin-right : 3px;
+}
+
+.panel-heading{  /*글 제목 설정*/
+    font-size: large;
+    font-weight: bolder;
+}
+
+.content-date{  /*작성 일자 위치 변경*/
+    display: inline;
+    float : right;
+    font-size: small;
+    font-weight: normal;
 }

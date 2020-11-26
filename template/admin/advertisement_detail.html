@@ -7,7 +7,7 @@
         <div class="panel-heading">
             {{ post.title }}
             <div class="content-date" style="padding-bottom: 10px">
-                작성일 : {{ post.dateFormat( post.createdAt ) }}
+               {{ post.dateFormat( post.createdAt ) }}
             </div>
         </div>
         <div class="panel-body">
@@ -17,7 +17,7 @@
     </div>
 
     <a href="/admin/adv" class="btn btn-default">목록으로</a>
-    <a href="/admin/adv/edit/{{ post.id }}" class="btn btn-primary">수정</a>
+    <a href="/admin/adv/edit/{{ post.id }}" class="btn btn-primary">수정</a><br><br>
 
 
 
