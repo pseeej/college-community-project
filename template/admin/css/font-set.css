@@ -1,0 +1,80 @@
+/***** FONT SETTINGS ******/
+
+@font-face {
+  font-family: 'Notosan';
+  src: local('NotoSansKR-Light'),
+  url('NotoSansKR-Light.otf');
+}
+
+@font-face {
+  font-family: 'Gugi';
+  src:local('Gugi-Regular'),
+  url('Gugi-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'NanumPen';
+  src:local('NanumPenScript-Regular'),
+  url('NanumPenScript-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Sunflower';
+  src:local('Sunflower-Light'),
+  url('Sunflower-Light.ttf');
+}
+
+body {
+  font-family: 'Notosan' , sans-serif;
+}
+
+h3,
+h4,
+.main-overlay-text {
+  font-family: "Sunflower", sans-serif;
+  font-weight:250;
+}
+
+  
+h1 {
+  font-family: 'Gugi', sans-serif;
+  font-weight: normal;
+  font-size: 2.4em;
+}
+
+h2 {
+  font-family: 'Gugi', sans-serif;
+  font-weight: normal;
+  font-size: 2.2em;
+}
+
+h3 {
+    font-weight: normal;
+    font-size: 1.6em;
+  }
+
+h4 {
+  font-weight: normal;
+  font-size: 1.4em;
+}
+
+p {
+  font-weight: 200;
+}
+  
+.set-font-to-sunflower {
+  font-family:"Sunflower", sans-serif;
+}
+
+.set-font-to-notosan {
+  font-family:"Notosan", sans-serif;
+}
+
+.set-font-to-nanumpen {
+  font-family:"Nanumpen", sans-serif;
+}
+
+.bold-text {
+  font-weight: bold;
+  font-size: 13px;
+}

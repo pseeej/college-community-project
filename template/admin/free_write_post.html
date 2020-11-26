@@ -1,0 +1,20 @@
+{% set title = "자유게시판 게시글 쓰기" %}
+{% set subtitle = "게시글 쓰기" %}
+{% extends "layout/base.html" %}
+ 
+{% block content -%}
+    <form action="" method="post">
+        <table class="table table-bordered">
+            <tr>
+                <th>제목</th>
+                <td><input type="text" name="title" class="form-control" value="{{ post.title }}"/></td>
+            </tr>
+            <tr>
+                <th>내용</th>
+                <td><input type="text" name="description" class="form-control" value="{{ post.description }}"/></td>
+            </tr>
+        </table>
+        <button class="btn btn-primary">작성하기</button>
+    </form>
+
+{% endblock %}
