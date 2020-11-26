@@ -1,0 +1,89 @@
+/***** Community ******/
+body { /* set image on background */
+  background-image: url(../../../img/background.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  background-attachment: scroll;
+}
+
+/* change Community-head css */
+.Community-head { 
+  margin-top: 10%;
+  padding: 10px;
+  margin-bottom: 30px;
+  background-color: white;
+  opacity: 0.5;
+}
+
+.col-style { /* move value to col-style-content */
+  position: relative;
+  display: inline-block;
+  width: 45%;
+  height: 80px;
+  padding-top: 0px;
+}
+
+.col-image {
+  width:98%;
+  height:250px;
+  border: 3px outset #5050ff;
+  margin-top: 10px;
+}
+
+.col-style.view {
+  width: 20%;
+  height: 20%;
+  margin: auto;
+  border: none;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  display:flex;
+}
+
+.col-style-column {
+  flex: 1;
+  margin: 0 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.col-style-content {
+  font-family: "Gugi", sans-serif;
+  font-size: 40px;
+  text-align: center;
+  border: 5px solid #5050ff;
+  width:auto;
+  border-radius: 0px 20px 0px 20px;
+  margin-right: auto;
+  flex: 1;
+}
+
+.col-content { /* create new css for abstract content */
+  float: left;
+  box-sizing: border-box;
+  margin-left: 10px;
+  margin-bottom: 50px;
+  align-content: center;
+  border: double black;
+  background-color: white;
+  opacity: 0.5;
+  width: 45%;
+  height: 160px;
+}
+
+.round {
+  border-radius: 10%;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.right-text {
+  text-align: right;
+}
+
+.left-text {
+  text-align: left;
+}
