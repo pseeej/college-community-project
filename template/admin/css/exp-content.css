@@ -44,11 +44,12 @@
     flex: 1;
     margin-left: 10px;
     overflow: auto;
+    background-color: white;
 }
 
 .sidebar-main-text {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 .side-rm-text-dec {
@@ -108,6 +109,8 @@
 .btn-default{ /*목록으로*/
     float : right;
     margin-left : 3px;
+    margin-bottom: 3px;
+    margin-right: 10px;
 }
 
 .btn-primary{ /*수정*/
@@ -121,7 +124,8 @@
 }
 
 .content-date{  /*작성 일자 위치 변경*/
-    text-align: right;
+    display: inline;
+    float : right;
     font-size: small;
     font-weight: normal;
 }

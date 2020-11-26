@@ -1,5 +1,5 @@
-{% set title = "자유 게시판 게시글 작성하기" %}
-{% set subtitle = "자유 게시글<br>작성하기" %}
+{% set title = "질문 게시판 게시글 작성하기" %}
+{% set subtitle = "질문 게시글<br>작성하기" %}
 {% extends "layout/base.html" %}
  
 {% block content -%}
@@ -14,7 +14,7 @@
                 <td><input type="text" name="description" class="form-control" value="{{ post.description }}"/></td>
             </tr>
         </table>
-        <button class="btn btn-primary" style="margin-right: 10px;">작성하기</button><br><br>
+        <button class="btn btn-primary" style="margin-right: 10px;">작성하기</button><br><br> <!--수정창의 작성하기 버튼-->
     </form>
 
 {% endblock %}
