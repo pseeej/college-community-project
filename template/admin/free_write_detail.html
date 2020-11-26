@@ -1,5 +1,5 @@
 {% set title = "자유게시판 상세보기" %}
-{% set subtitle = "게시글 상세보기" %}
+{% set subtitle = "자유 게시글 보기" %}
 {% extends "layout/base.html" %}
  
 {% block content -%}
@@ -9,7 +9,7 @@
         </div>
         <div class="panel-body">
             <div style="padding-bottom: 10px">
-                작성일 : {{ post.dateFormat( post.createdAt ) }}
+               {{ post.dateFormat( post.createdAt ) }}
             </div>
 
             {{ post.description }}

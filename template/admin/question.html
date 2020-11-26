@@ -1,73 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>질문게시판</title>
-    <link rel="stylesheet" href="css/font-set.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/exp-content.css">
-</head>
-<body>
-    <div class="container">
-        <header class="header_box">
-            <div class="profile-title">
-                <h1 class="name-title h1"><a href="index.html" class="side-rm-text-dec">College Community</a></h1>
-            </div>
-            <div class="dropdown">
-                <li><a href="index.html" class="link-ul">Home</a></li>
-                <li><a href="index.html" class="link-ul">계정관리</a></li>
-                <li>
-                    <div>커뮤니티</div>
-                    <ul>
-                        <li><a href="" class="link-ul">자유 게시판</li></a>
-                        <li><a href="" class="link-ul">홍보 게시판</a></li>
-                        <li><a href="" class="link-ul">질문 게시판</a></li>
-                        <li><a href="" class="link-ul">각종 팁</a></li>
-                    </ul>
-                </li>
-                <li><a href="" class="link-ul">위치 찾기</a></li>
-            </div>
-        </header>
+{% set title = "질문 게시판" %}
+{% set subtitle = "질문 게시판" %}
+{% extends "layout/base.html" %}
+ 
+{% block content -%}
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>제목</th>
+            <th>작성일</th>
+            <th>삭제</th>
+        </tr>
+        {% for post in post %}
+        <tr>
+            <td>
+                <a href="/admin/que/detail/{{  post.id }}">{{ post.title }}</a>
+            </td>
+            <td>
+                {{ post.dateFormat( post.createdAt ) }}
+            </td>
+            <td>
+                <a href="/admin/que/delete/{{ post.id }}" class="btn btn-danger" onclick="return confirm('삭제하시겠습니까?')">삭제</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
 
-        <!-- 메인 컨텐츠 파트 -->
-        <div class="display-set-flex">
-            <aside class="sidebar">
-                <h1 id="FIRST" class="sidebar-text">질문 게시판</h1>
-            </aside>
-            <main class="sidebar-main sidebar-main-text">
-                <p class="indent lined-text main-divide">공무원은 국민전체에 대한 봉사자이며, 국민에 대하여 책임을 진다. 
-                    군인은 현역을 면한 후가 아니면 국무위원으로 임명될 수 없다. 
-                    모든 국민은 능력에 따라 균등하게 교육을 받을 권리를 가진다. 
-                    행정권은 대통령을 수반으로 하는 정부에 속한다. 
-                    지방자치단체는 주민의 복리에 관한 사무를 처리하고 재산을 관리하며, 
-                    법령의 범위안에서 자치에 관한 규정을 제정할 수 있다. 모든 국민은 주거의 자유를 침해받지 아니한다. 
-                    주거에 대한 압수나 수색을 할 때에는 검사의 신청에 의하여 법관이 발부한 영장을 제시하여야 한다. 
-                    군인은 현역을 면한 후가 아니면 국무총리로 임명될 수 없다. 
-                    대통령은 조국의 평화적 통일을 위한 성실한 의무를 진다.<br>
-                </p>
-            </main>
-        </div>
+    <a href="/admin/que/write" class="btn btn-default">작성하기</a>
 
-        <footer>
-            <div class="aside-list">
-                <div class="author-inform">
-                    <div class="author-inform-row">
-                        <span class="bold-text">문의사항</span>
-                        <ul>
-                            <li>pshgjh@gmail.com</li>
-                            <li>github.com/psh179/college-community-project</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <p class="author-copyright bold-text">@ 2020 Soongsil University WebProj</p>
-        </footer>
-
-    </div>
-    
-</body>
-</html>
+{% endblock %}
