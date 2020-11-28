@@ -28,7 +28,8 @@ exports.post_free_write_write = ( req , res ) => {
     
     models.posts.create({
         title : req.body.title,
-        description : req.body.description
+        description : req.body.description,
+        post_id : 1
     }).then( () => {
         res.redirect('/admin/free_write');
     })
@@ -53,7 +54,6 @@ exports.post_free_write_edit = ( req , res ) => {
         {
             title : req.body.title,
             description : req.body.description,
-            post_id : 1
         }, 
         { 
             where : { id: req.params.id } 
