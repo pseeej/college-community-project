@@ -150,3 +150,143 @@ exports.get_adv_index = (req, res) => {
 exports.get_adv_slash = (req, res) => {
     res.redirect('/admin/adv');
 }
+
+//--------------------질문게시판 세팅------------------------//
+
+exports.get_que = ( _ , res) => {
+    models.posts.findAll({
+
+    }).then( (post) => {
+        res.render( 'admin/question.html' ,{ post});
+    });
+}
+
+exports.get_que_write = ( _ , res) => {
+    res.render( 'admin/question_post.html');
+}
+
+exports.post_que_write = ( req , res ) => {
+    
+    models.posts.create({
+        title : req.body.title,
+        description : req.body.description
+    }).then( () => {
+        res.redirect('/admin/que');
+    })
+}
+
+exports.get_que_detail = ( req , res ) => {
+    models.posts.findByPk(req.params.id).then( (post) => {
+        res.render('admin/question_detail.html', { post });  
+    });
+};
+
+exports.get_que_edit = ( req , res ) => {
+    models.posts.findByPk(req.params.id).then( (post) => {
+        res.render('admin/question_post.html', { post });
+    });
+};
+
+exports.post_que_edit = ( req , res ) => {
+
+    models.posts.update(
+        {
+            title : req.body.title,
+            description : req.body.description
+        }, 
+        { 
+            where : { id: req.params.id } 
+        }
+    ).then( () => {
+        res.redirect('/admin/que/detail/' + req.params.id );
+    });
+
+}
+
+exports.get_que_delete = ( req , res ) => {
+    models.posts.destroy({
+        where: {
+            id: req.params.id
+        }
+    }).then( () => {
+        res.redirect('/admin/que');
+    });
+}; 
+
+exports.get_que_index = (req, res) => {
+    res.redirect('/admin');
+}
+
+exports.get_que_slash = (req, res) => {
+    res.redirect('/admin/que');
+}
+
+//--------------------팁게시판 세팅------------------------//
+
+exports.get_tip = ( _ , res) => {
+    models.posts.findAll({
+
+    }).then( (post) => {
+        res.render( 'admin/tip.html' ,{ post});
+    });
+}
+
+exports.get_tip_write = ( _ , res) => {
+    res.render( 'admin/tip_post.html');
+}
+
+exports.post_tip_write = ( req , res ) => {
+    
+    models.posts.create({
+        title : req.body.title,
+        description : req.body.description
+    }).then( () => {
+        res.redirect('/admin/tip');
+    })
+}
+
+exports.get_tip_detail = ( req , res ) => {
+    models.posts.findByPk(req.params.id).then( (post) => {
+        res.render('admin/tip_detail.html', { post });  
+    });
+};
+
+exports.get_tip_edit = ( req , res ) => {
+    models.posts.findByPk(req.params.id).then( (post) => {
+        res.render('admin/tip_post.html', { post });
+    });
+};
+
+exports.post_tip_edit = ( req , res ) => {
+
+    models.posts.update(
+        {
+            title : req.body.title,
+            description : req.body.description
+        }, 
+        { 
+            where : { id: req.params.id } 
+        }
+    ).then( () => {
+        res.redirect('/admin/tip/detail/' + req.params.id );
+    });
+
+}
+
+exports.get_tip_delete = ( req , res ) => {
+    models.posts.destroy({
+        where: {
+            id: req.params.id
+        }
+    }).then( () => {
+        res.redirect('/admin/tip');
+    });
+}; 
+
+exports.get_tip_index = (req, res) => {
+    res.redirect('/admin');
+}
+
+exports.get_tip_slash = (req, res) => {
+    res.redirect('/admin/tip');
+}

@@ -1,0 +1,35 @@
+{% set title = "택배 배송조회" %}
+{% set subtitle = "CJ대한통운<br>배송조회" %}
+{% extends "layout/base.html" %}
+ 
+{% block content -%}
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>단계</th>
+            <th>처리 일자</th>
+            <th>배송 상태</th>
+            <th>담당 점소</th>
+        </tr>
+        {% for result in result %}
+        <tr>
+            <td>
+                {{ result.step }}
+            </td>
+            <td>
+                {{ result.date }}
+            </td>
+            <td>
+                {{ result.status }}
+            </td>
+            <td>
+                {{ result.location }}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/admin/shipping" class="btn btn-default">송장조회 돌아가기</a>
+
+
+
+{% endblock %}
