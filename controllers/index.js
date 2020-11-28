@@ -39,6 +39,12 @@ router.get('/admin/shipping', index_ctrl.get_index_ship);
 
 router.post('/admin/shipping', index_ctrl.post_shipping);
 
+//코로나 페이지 세팅
+router.get('/covid.html', index_ctrl.get_index_covid);
+
+router.get('/admin/covid', index_ctrl.get_index_covid);
+
+
 //admin 경로설정
 
 router.use('/admin', require('./admin'));

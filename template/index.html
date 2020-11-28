@@ -37,6 +37,20 @@
             <h2 class="Community-head">Community</h2>
             <div class="col-style">
                 <div class="col-style-column">
+                    <div class="col-style-corona"><a href="/admin/covid" class="main-rm-text-dec">코로나 현황</a></div>
+                </div>
+            </div>
+            <div class="col-style">
+                <div class="col-style-column">      
+                    <div class="col-style-alram"><a href="/admin/shipping" class="main-rm-text-dec">택배 추적</a></div>
+                </div>
+            </div>
+            <div class="col-content-bottom" style="text-align: center">
+                <h2>현재 코로나 상황 확인</h2>
+            </div>
+            <div class="col-content-bottom" style="text-align: center"><h2>CJ 대한통운 택배 추적 시스템</h2></div><br><br><br>
+            <div class="col-style">
+                <div class="col-style-column">
                     <div class="col-style-content"><a href="/admin/free_write" class="main-rm-text-dec">자유 게시판</a></div>
                 </div>
             </div>
@@ -44,9 +58,7 @@
                 <div class="col-style-column">
                     <div class="col-style-content"><a href="/admin/adv" class="main-rm-text-dec">홍보 게시판</a></div>
                 </div>
-            </div>
-            <div class="col-content">자유게시판의 내용을 조금만 보여줍니다.</div>
-            <div class="col-content">홍보게시판의 내용을 조금만 보여줍니다.</div>
+            </div><br><br><br><br>
             <div class="col-style">
                 <div class="col-style-column">
                     <div class="col-style-content"><a href="/admin/que" class="main-rm-text-dec">질문 게시판</a></div>
@@ -57,36 +69,6 @@
                     <div class="col-style-content"><a href="/admin/tip" class="main-rm-text-dec">각종 팁</a></div>
                 </div>
             </div>
-            <div class="col-content">
-                자유게시판의 내용을 조금만 보여줍니다.
-                <table class="table table-bordered table-hover">
-                    <tr>
-                        <th>제목</th>
-                    </tr>
-                    {% for post in post %}
-                    <tr>
-                        <td>
-                            <a href="/admin/free_write/detail/{{  post.id }}">{{ post.title }}</a>
-                        </td>
-                    </tr>
-                    {% endfor %}
-                </table>
-            </div>
-            <div class="col-content">홍보게시판의 내용을 조금만 보여줍니다.</div>
-            <div class="col-style">
-                <div class="col-style-column">
-                    <!-- 코로나 현황 -->
-                    <div class="col-style-corona"><a href="/admin/question.html" class="main-rm-text-corona">코로나 현황</a></div>
-                </div>
-            </div>
-            <div class="col-style">
-                <div class="col-style-column">      
-                    <!-- a href 에 링크 수정이 필요합니다. 택배 크롤링 -->
-                    <div class="col-style-alram"><a href="/admin/shipping" class="main-rm-text-dec">택배 추적</a></div>
-                </div>
-            </div>
-            <div class="col-content-bottom">코로나현황을 간단히 표현합니다.</div>
-            <div class="col-content-bottom">택배 추적 시스템</div>
             <p class="main-divide"></p>
         </main>
 

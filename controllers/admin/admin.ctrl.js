@@ -52,7 +52,8 @@ exports.post_free_write_edit = ( req , res ) => {
     models.posts.update(
         {
             title : req.body.title,
-            description : req.body.description
+            description : req.body.description,
+            post_id : 1
         }, 
         { 
             where : { id: req.params.id } 
@@ -99,7 +100,8 @@ exports.post_adv_write = ( req , res ) => {
     
     models.posts.create({
         title : req.body.title,
-        description : req.body.description
+        description : req.body.description,
+        post_id : 2
     }).then( () => {
         res.redirect('/admin/adv');
     })
@@ -169,7 +171,8 @@ exports.post_que_write = ( req , res ) => {
     
     models.posts.create({
         title : req.body.title,
-        description : req.body.description
+        description : req.body.description,
+        post_id : 3
     }).then( () => {
         res.redirect('/admin/que');
     })
@@ -239,7 +242,8 @@ exports.post_tip_write = ( req , res ) => {
     
     models.posts.create({
         title : req.body.title,
-        description : req.body.description
+        description : req.body.description,
+        post_id : 4
     }).then( () => {
         res.redirect('/admin/tip');
     })

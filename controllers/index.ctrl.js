@@ -7,13 +7,7 @@ const app = express();
 app.set('json spaces', 2);
 
 exports.get_index = ( _ , res) => {
-    //res.render('index.html');
-    models.posts.findAll({
-
-    }).then( (post) => {
-        // DB에서 받은 posts를 posts변수명으로 내보냄
-        res.render( 'index.html' ,{ post});
-    });
+    res.render('index.html');
 }
 
 exports.get_index_free = ((req, res) => {
@@ -98,4 +92,28 @@ async function crawl(req, res) {
         console.log(e)
     }   
 
+}
+
+exports.get_index_covid = async (req, res) => {
+    try{
+
+        const url = `http://ncov.mohw.go.kr/` ;
+        let result = []; //최종 보내는 데이터
+        temp = {}
+        
+        const html = await request(url);
+        const $ = cheerio.load( html , 
+            { decodeEntities: false } //한글 변환
+        );
+ 
+        const tdElements = $(".liveNum").find("ul li span"); 
+        temp["total"] = tdElements[0].children[1].data;
+        temp["current"] = tdElements[2].children[0].data
+        result.push(temp);
+        console.log(result);
+        res.render('admin/covid.html', {result});
+
+    }catch(e){
+        console.log(e)
+    }    
 }

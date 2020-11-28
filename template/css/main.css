@@ -9,6 +9,7 @@ body { /* set image on background */
 
 /* change Community-head css */
 .Community-head { 
+  z-index:2;
   font-family: "Gugi", sans-serif;
   margin-top: 0px;
   padding: 10px;

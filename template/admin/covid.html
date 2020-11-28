@@ -1,0 +1,23 @@
+{% set title = "코로나 확진자" %}
+{% set subtitle = "확진자 확인" %}
+{% extends "layout/base.html" %}
+ 
+{% block content -%}
+    <table class="table table-bordered table-hover" style="width: 500px; margin-left: 10px; text-align: center">
+        <tr>
+            <th style="font-size: 30px; color: #ff4500; text-align: center">누적 확진 환자</th>
+            <th style="width: 200px"></th>
+        </tr>
+        {% for result in result %}
+        <tr>
+            <td style="font-size: 20px">
+                {{ result.total }}
+            </td>
+            <td style="font-size: 20px">
+                {{ result.current }}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

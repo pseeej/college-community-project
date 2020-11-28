@@ -10,6 +10,7 @@
             <th>삭제</th>
         </tr>
         {% for post in post %}
+        {% if post.post_id == 2 %}
         <tr>
             <td>
                 <a href="/admin/adv/detail/{{  post.id }}">{{ post.title }}</a>
@@ -21,6 +22,7 @@
                 <a href="/admin/adv/delete/{{ post.id }}" class="btn btn-danger" onclick="return confirm('삭제하시겠습니까?')">삭제</a>
             </td>
         </tr>
+        {% endif %}
         {% endfor %}
     </table>
 
