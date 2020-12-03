@@ -1,1 +1,2 @@
-# -Private-Updated-11-seconds-ago-This-project-aims-to-create-a-community-site-for-college-students.-
+# 대학생을 위한 미니 커뮤니티 제작 프로젝트 입니다. #
+# 해당 프로젝트에 대한 시연 영상은 https://youtu.be/8MB9mEWZgi0 를 참고해 주세요.
